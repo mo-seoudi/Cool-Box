@@ -33,6 +33,14 @@
 .padelMoment figcaption span{font-family:'Barlow Condensed';font-size:14px;font-weight:700;letter-spacing:1px;color:#7cddff}
 .padelMoment figcaption strong{font-family:'Barlow Condensed';font-size:30px;line-height:1.05}
 
+/* Bottom branding: keep SPARX as a quiet endorsement, then finish with a compact Cool Box footer. */
+.sparx{margin:38px auto 0!important;line-height:1!important;display:flex;justify-content:center;align-items:center}
+.sparx img{display:block;width:180px!important;max-width:42vw;height:auto;object-fit:contain}
+footer{padding:26px 0!important}
+footer .shell{display:flex;align-items:center;justify-content:space-between;gap:28px}
+.footerLogo{width:104px!important;margin:0!important;padding:5px!important;border-radius:3px!important;flex:none}
+footer p{margin:0!important;text-align:right;line-height:1.5}
+
 @media(max-width:900px){
  .heroProduct{transform:translateX(50%) rotate(-1deg)!important}
  .couponOne{left:2%!important}.couponTwo{right:2%!important}.couponThree{left:7%!important}.couponFour{right:6%!important}
@@ -43,4 +51,6 @@
  .couponOne{left:0!important;top:52px!important;width:66px!important}.couponTwo{right:0!important;top:25px!important;width:65px!important}.couponThree{left:3%!important;bottom:31px!important;width:60px!important}.couponFour{right:2%!important;bottom:70px!important;width:60px!important}
  .conceptGlow{width:220px;height:220px;top:42px}.conceptWater{width:280px;top:44px}.conceptIce{width:80px}.conceptCouponA{width:74px!important;right:-7px!important}.conceptCouponB{width:62px!important;left:-8px!important}.conceptCouponC{width:58px!important;right:-2px!important}
  .padelMoment{min-height:390px;margin-top:12px}.padelMoment figcaption{left:18px;right:18px;bottom:17px}.padelMoment figcaption strong{font-size:24px}
+ .sparx{margin-top:30px!important}.sparx img{width:145px!important;max-width:48vw}
+ footer{padding:22px 0!important}footer .shell{gap:16px}.footerLogo{width:86px!important}footer p{font-size:10px!important;max-width:190px}
 }

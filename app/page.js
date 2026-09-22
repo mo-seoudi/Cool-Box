@@ -1,64 +1,34 @@
 'use client'
 
-import { ArrowRight, Droplets, Gift, MapPin, QrCode, Target, Ticket, Users } from 'lucide-react'
+import { ArrowRight, Check, Droplets, MapPin, QrCode, Ticket, Users } from 'lucide-react'
 
-const steps = [
-  { n:'01', title:'A useful product', text:'Chilled water is offered free to people where they are already active, gathering or attending.' },
-  { n:'02', title:'Brands become part of it', text:'The Cool Box carries branded advertising and detachable offers designed to invite interaction.' },
-  { n:'03', title:'People take action', text:'Offers can lead people to a store, a social page, a QR experience or another clear call to action.' },
+const reasons = [
+  ['Hyper-Targeted','Reach padel players directly — no wasted impressions.'],
+  ['Physical Touchpoint','Your ad is held, seen and remembered, unlike digital ads.'],
+  ['Ads Stand Out','Only 8 ads on the box — no ad clutter.'],
+  ['High Engagement','Connect with your audience, build awareness and convert to sales.'],
+  ['Premium Venues','Distributed at leading padel clubs and sports centers.'],
 ]
 
-const environments = ['Sports & Padel','Events','Exhibitions','Universities','Festivals','Corporate Gatherings']
+const venues = ['The Padelist — Achrafieh Courts','The Padelist — Ein El Remmane','The Padelist — Zalka Courts','The Padelist — Dbayeh / Naccache Courts','The Racket Concept — Furn El Chebbek']
 
-export default function Home() {
-  return <main>
-    <header className="nav shell">
-      <a className="brand" href="#top"><span>COOL</span><b>BOX</b></a>
-      <nav><a href="#concept">The Concept</a><a href="#advertisers">For Brands</a><a href="#places">Where We Go</a><a href="#about">About</a></nav>
-      <a className="button small" href="#contact">Work with us <ArrowRight size={16}/></a>
-    </header>
+export default function Home(){return <main>
+<header className="nav shell"><a className="logo" href="#top"><i></i><span>COOL<br/><b>BOX</b></span><small>Stay cool. Save more</small></a><nav><a href="#what">What is Cool Box?</a><a href="#why">Why Cool Box?</a><a href="#network">Our Network</a><a href="#offer">Advertising Offer</a></nav><a className="button" href="#contact">Advertise with us</a></header>
 
-    <section className="hero" id="top">
-      <div className="shell hero-grid">
-        <div className="hero-copy">
-          <div className="eyebrow"><span></span> MEDIA THAT MOVES WITH YOUR AUDIENCE</div>
-          <h1>Advertising<br/>people actually <em>use.</em></h1>
-          <p>Cool Box turns a simple moment of refreshment into a physical brand experience — combining chilled water, advertising and detachable offers in one memorable format.</p>
-          <div className="actions"><a className="button" href="#concept">Discover Cool Box <ArrowRight size={18}/></a><a className="text-link" href="#advertisers">I’m an advertiser <ArrowRight size={16}/></a></div>
-          <div className="micro"><div><strong>8</strong><span>detachable offer positions</span></div><div><strong>1</strong><span>useful physical touchpoint</span></div><div><strong>∞</strong><span>ways to engage</span></div></div>
-        </div>
-        <div className="hero-art" aria-label="Cool Box product illustration">
-          <div className="halo"></div>
-          <div className="box3d">
-            <div className="lid"><span>STAY COOL.</span></div>
-            <div className="face">
-              <div className="cbmark">COOL<br/><b>BOX</b></div>
-              <div className="water"><Droplets size={19}/> CHILLED WATER INSIDE</div>
-              <div className="coupon-grid"><span>BRAND</span><span>OFFER</span><span>SCAN</span><span>SAVE</span></div>
-            </div>
-            <div className="side"><span>YOUR BRAND</span><span>YOUR OFFER</span><span>YOUR MOMENT</span></div>
-          </div>
-          <div className="float-card fc1"><Gift size={18}/><span><b>Detachable offers</b>People keep what matters</span></div>
-          <div className="float-card fc2"><QrCode size={18}/><span><b>Trackable action</b>Connect print to digital</span></div>
-        </div>
-      </div>
-      <div className="scroll-note">SCROLL TO EXPLORE <span>↓</span></div>
-    </section>
+<section className="hero" id="top"><div className="shell heroGrid"><div className="heroText"><p className="kicker">AN INNOVATIVE ADVERTISING & ENGAGEMENT CONCEPT</p><h1>Connect with<br/><em>padel players</em><br/>at the peak<br/>of their game.</h1><p className="lead">Cool Box delivers a fresh approach to connecting with consumers through branded water bottle boxes, removable voucher coupons and direct calls to action.</p><div className="heroActions"><a className="button" href="#what">Discover Cool Box <ArrowRight size={17}/></a><a className="plain" href="#offer">View advertising offer</a></div></div><div className="productStage"><div className="box"><div className="boxTop">COOL BOX</div><div className="boxFace"><div className="miniLogo">COOL<br/><b>BOX</b></div><div className="ad a1">YOUR<br/>BRAND</div><div className="ad a2">20%<br/><small>OFF</small></div><div className="ad a3">SCAN<br/><QrCode size={26}/></div><div className="ad a4">TRY<br/>ME</div></div></div><div className="bottle"></div><span className="voucher v1">10% OFF</span><span className="voucher v2">FREEBIE</span><span className="voucher v3">SCAN ME</span></div></div></section>
 
-    <section className="statement" id="concept"><div className="shell narrow"><div className="eyebrow light"><span></span> THE IDEA</div><h2>Not another ad.<br/>A <em>useful</em> brand moment.</h2><p>People are surrounded by advertising. Cool Box approaches them differently: give them something they want first, then give brands a focused space to be discovered.</p></div></section>
+<section className="what" id="what"><div className="shell"><div className="sectionTitle"><span></span><div><p>WHAT IS THE “COOL BOX”?</p><h2>A box built to deliver<br/><em>exposure + engagement.</em></h2></div></div><div className="whatGrid"><div className="courtScene"><div className="courtLines"></div><div className="courtBox">COOL<br/><b>BOX</b></div><span>PADEL COURT</span></div><div className="facts"><div><Droplets/><p><b>Chilled water bottles</b> are placed inside the Cool Box and distributed <b>FREE</b> to padel players.</p></div><div><Ticket/><p>The exterior features <b>8 separate ad panels</b>, each designed as a removable voucher coupon.</p></div><div><Check/><p>Consumers can tear off coupons and redeem them for <b>discounts, freebies or offers</b> at the advertiser’s business.</p></div><div><Users/><p>Brand exposure and <b>direct customer engagement</b> happen at the same time.</p></div></div></div></div></section>
 
-    <section className="how"><div className="shell"><div className="section-head"><div><div className="eyebrow"><span></span> HOW IT WORKS</div><h2>From refreshment<br/>to <em>response.</em></h2></div><p>The Cool Box is designed to move naturally from physical exposure to real interaction.</p></div><div className="steps">{steps.map(s=><article key={s.n}><div className="stepnum">{s.n}</div><div className="stepicon">{s.n==='01'?<Droplets/>:s.n==='02'?<Ticket/>:<Target/>}</div><h3>{s.title}</h3><p>{s.text}</p></article>)}</div></div></section>
+<section className="why" id="why"><div className="shell"><div className="sectionTitle white"><span></span><div><p>WHY ADVERTISE ON COOL BOX?</p><h2>Physical. Focused.<br/><em>Actionable.</em></h2></div></div><div className="reasonGrid">{reasons.map((r,i)=><article key={r[0]}><strong>0{i+1}</strong><h3>{r[0]}</h3><p>{r[1]}</p></article>)}</div></div></section>
 
-    <section className="brands" id="advertisers"><div className="shell brand-grid"><div className="visual-panel"><div className="offer-card"><small>DETACH • KEEP • REDEEM</small><b>YOUR<br/>OFFER</b><div className="fakeqr">▦</div><span>Make your next customer interaction tangible.</span></div><div className="circletext">COOL BOX • STAY COOL • SAVE MORE • </div></div><div className="brand-copy"><div className="eyebrow light"><span></span> FOR ADVERTISERS</div><h2>Be present when<br/>attention is <em>real.</em></h2><p>Cool Box gives brands a physical place in the customer experience. Each campaign can combine visibility with a direct reason to act.</p><div className="features"><div><QrCode/><span><b>Connect physical to digital</b>Use QR-led calls to action and campaign destinations.</span></div><div><Gift/><span><b>Offers worth keeping</b>Detachable panels let people take an offer with them.</span></div><div><Target/><span><b>Focused distribution</b>Place campaigns in selected venues, communities and events.</span></div></div><a className="button white" href="#contact">Advertise with Cool Box <ArrowRight size={18}/></a></div></div></section>
+<section className="ctaFlow"><div className="shell"><div className="sectionTitle"><span></span><div><p>UNIQUE CALL TO ACTION</p><h2>Coupon redemption that<br/><em>drives real visits.</em></h2></div></div><div className="flow"><div><QrCode/><h3>Include a QR Code</h3><p>Show your menu or social media page on your ad face and grow interaction organically.</p></div><i></i><div><Ticket/><h3>Example Offers</h3><p>Turn exposure into a clear incentive with discounts, freebies and redeemable offers.</p></div><i></i><div><Users/><h3>Redemption Tracking</h3><p>Measure campaign effectiveness through unique usage.</p></div></div></div></section>
 
-    <section className="places" id="places"><div className="shell"><div className="section-head"><div><div className="eyebrow"><span></span> BUILT TO GO PLACES</div><h2>Meet people where<br/>they <em>already are.</em></h2></div><p>Cool Box started in active environments and is designed to work across places where people gather, participate and engage.</p></div><div className="environment-grid">{environments.map((x,i)=><div className={'env e'+i} key={x}><span>0{i+1}</span><h3>{x}</h3><ArrowRight/></div>)}</div></div></section>
+<section className="audience"><div className="shell"><div className="sectionTitle"><span></span><div><p>TARGET AUDIENCE</p><h2>Premium, active<br/>and <em>social.</em></h2></div></div><div className="audGrid"><article><span>01</span><h3>Padel Players & Sports Enthusiasts</h3><p>Active individuals passionate about sports and fitness.</p></article><article><span>02</span><h3>Young Professionals & Active Adults</h3><p>Individuals with disposable income and a desire for premium experiences.</p></article><article><span>03</span><h3>Trend-Conscious Consumers</h3><p>Consumers focused on wellness and modern lifestyles.</p></article></div></div></section>
 
-    <section className="network"><div className="shell network-grid"><div><div className="eyebrow light"><span></span> GROWING NETWORK</div><h2>Born in Lebanon.<br/>Built to <em>move.</em></h2><p>Cool Box is already being presented through padel and event environments, with a growing distribution footprint across Greater Beirut, Saida and surrounding areas.</p><div className="network-stats"><div><MapPin/><span><b>Venues</b>Targeted physical distribution</span></div><div><Users/><span><b>Communities</b>People in active moments</span></div></div></div><div className="map-art"><div className="map-line"></div><i className="pin p1"></i><i className="pin p2"></i><i className="pin p3"></i><i className="pin p4"></i><div className="map-label ml1">GREATER BEIRUT</div><div className="map-label ml2">SAIDA & SURROUNDINGS</div></div></div></section>
+<section className="network" id="network"><div className="shell networkGrid"><div><p className="kicker pale">OUR NETWORK — GREATER BEIRUT</p><h2>Direct access to<br/><em>padel players.</em></h2><p className="networkIntro">Branded water bottle boxes are distributed free with court reservations, building a direct and personal connection with active customers.</p><div className="venueList">{venues.map(v=><div key={v}><MapPin size={17}/><span>{v}</span></div>)}</div></div><div className="mapPanel"><div className="coast"></div><i className="pin p1"></i><i className="pin p2"></i><i className="pin p3"></i><i className="pin p4"></i><i className="pin p5"></i><span>GREATER<br/>BEIRUT</span></div></div></section>
 
-    <section className="about" id="about"><div className="shell about-grid"><div className="bigword">COOL</div><div><div className="eyebrow"><span></span> OUR POINT OF VIEW</div><h2>Useful wins<br/>attention.</h2><p>Cool Box is built around a simple belief: a brand interaction becomes more meaningful when it gives something back. Refreshment, discovery and an offer come together in one physical experience.</p><p className="tagline">Stay cool. <em>Save more.</em></p></div></div></section>
+<section className="offer" id="offer"><div className="shell"><div className="sectionTitle"><span></span><div><p>ADVERTISING OFFER</p><h2>Your space on<br/><em>Cool Box.</em></h2></div></div><div className="offerGrid"><div className="price"><small>PRICE PER AD SPACE</small><strong>$600</strong><p>Ad size: 6(w) × 10(h) cm</p></div><div className="offerDetails"><div><strong>4,000</strong><span>boxes distributed per campaign</span></div><div><strong>8</strong><span>coupon ads per box</span></div><div><strong>$300</strong><span>strip ad banner on 4 faces</span></div><div><strong>2</strong><span>strip banners — top & bottom</span></div></div><p className="ideal"><b>Ideal for:</b> restaurants, cafés, sports stores and lifestyle venues aiming to boost visits.</p></div></div></section>
 
-    <section className="cta" id="contact"><div className="shell"><div className="eyebrow light"><span></span> LET'S CREATE SOMETHING USEFUL</div><h2>Put your brand<br/><em>in their hands.</em></h2><p>Interested in advertising with Cool Box or bringing the experience to your venue or event?</p><a className="button white" href="mailto:info@sparxmediasolutions.com">Start a conversation <ArrowRight size={18}/></a></div></section>
-
-    <footer><div className="shell footer-grid"><div><div className="brand footerbrand"><span>COOL</span><b>BOX</b></div><p>Advertising people actually use.</p></div><div><b>Explore</b><a href="#concept">The Concept</a><a href="#advertisers">For Advertisers</a><a href="#places">Where We Go</a></div><div><b>Contact</b><a href="mailto:info@sparxmediasolutions.com">info@sparxmediasolutions.com</a><span>Lebanon</span></div></div><div className="shell copyright"><span>© {new Date().getFullYear()} Cool Box. All rights reserved.</span><span>A SPARX Media Solutions concept</span></div></footer>
-  </main>
-}
+<section className="contact" id="contact"><div className="shell"><p>CALL TO ACTION</p><h2>Turn padel players into<br/><em>your loyal customers.</em></h2><p className="contactLead">Connect with padel players and boost your business.</p><a className="button light" href="tel:03152071">Contact us — 03 152 071 <ArrowRight size={17}/></a><div className="sparx">SPAR<span>X</span><small>MEDIA SOLUTIONS</small></div></div></section>
+<footer><div className="shell"><div className="logo footerLogo"><i></i><span>COOL<br/><b>BOX</b></span><small>Stay cool. Save more</small></div><p>© {new Date().getFullYear()} Cool Box · SPARX Media Solutions</p></div></footer>
+</main>}

@@ -1,0 +1,96 @@
+.menuButton,.mobileMenu{display:none}
+img{max-width:100%}
+html,body{max-width:100%;overflow-x:hidden}
+
+@media(max-width:900px){
+  .nav{height:88px}
+  .nav nav,.desktopCta{display:none}
+  .menuButton{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:0;background:transparent;color:var(--navy);cursor:pointer;padding:0}
+  .menuButton svg{width:29px;height:29px}
+  .mobileMenu{display:flex;position:absolute;top:78px;left:0;right:0;background:white;box-shadow:0 18px 35px rgba(24,55,78,.14);padding:18px;flex-direction:column;gap:0;border-top:3px solid var(--blue);z-index:100}
+  .mobileMenu>a:not(.button){font-family:'Barlow Condensed';font-size:20px;font-weight:600;padding:14px 8px;border-bottom:1px solid #e7ecef}
+  .mobileMenu .button{margin-top:14px;justify-content:center}
+  .hero{min-height:0}
+  .heroGrid{min-height:0}
+  .heroText{padding-right:0}
+  .heroComposition{max-width:560px}
+  .whatGrid,.networkGrid{gap:45px}
+  .reasonGrid article{padding:24px 20px}
+}
+
+@media(max-width:560px){
+  .shell{width:calc(100% - 32px)}
+  .nav{height:78px}
+  .officialLogo{width:108px}
+  .mobileMenu{top:70px;left:-1px;right:-1px}
+  .hero{background:linear-gradient(165deg,#fff 0 46%,#edf8fb 46% 100%)}
+  .hero:before{width:360px;height:360px;right:-230px;top:120px}
+  .hero:after{width:310px;height:310px;right:-100px;top:310px}
+  .heroGrid{padding-top:22px}
+  .heroText{text-align:left}
+  .kicker{font-size:15px;line-height:1.35}
+  .hero h1{font-size:44px;line-height:.96;margin:14px 0 20px}
+  .lead{font-size:20px;line-height:1.4}
+  .heroActions{margin-top:25px;gap:18px;width:100%}
+  .heroActions .button{width:100%;justify-content:center}
+  .heroActions .plain{font-size:17px}
+  .heroComposition{height:390px;margin-top:18px;width:100%}
+  .heroProduct{height:350px;top:7px;right:50%;transform:translateX(50%) rotate(2deg)}
+  .heroWater{width:310px;top:62px;opacity:.38}
+  .heroIce{width:95px;right:-8px;bottom:14px}
+  .heroCoupon{width:65px}
+  .couponOne{left:0;top:30px}.couponTwo{right:0;top:42px}.couponThree{width:62px;left:2px;bottom:28px}.couponFour{width:60px;right:0;bottom:75px}
+  .visualHalo{width:250px;height:250px;top:72px}
+  .orbitOne{width:305px;height:305px;top:35px}.orbitTwo{width:215px;height:215px;top:82px}
+  .heroValueStrip{margin-bottom:0}
+  .heroValueStrip>div{grid-template-columns:25px 1fr}
+  .what,.ctaFlow,.audience,.offer,.why,.network{padding:62px 0}
+  .what{padding-top:70px}
+  .sectionTitle{gap:12px;margin-bottom:38px}
+  .sectionTitle>span{width:8px;height:44px}
+  .sectionTitle h2,.network h2{font-size:37px;line-height:1.02}
+  .sectionTitle p{font-size:15px}
+  .whatGrid,.networkGrid{gap:35px}
+  .conceptCard{padding:8px;min-height:0}
+  .conceptVisual{height:315px}
+  .conceptBox{height:305px;max-width:none}
+  .conceptCoupon{width:82px;right:-2px;top:55px}
+  .facts>div{gap:14px;padding:17px 0}
+  .facts svg{width:21px;height:21px}
+  .facts p{font-size:19px}
+  .reasonGrid{gap:1px}
+  .reasonGrid article{padding:22px 20px}
+  .reasonGrid h3{font-size:23px;margin:14px 0 7px}
+  .reasonGrid p{font-size:17px;margin-bottom:0}
+  .flow>div{padding:22px 10px}
+  .flow>i{height:34px}
+  .sectionIntro{margin:-15px 0 28px 20px;font-size:19px}
+  .environmentGrid article{min-height:0;padding:22px}
+  .anywhere{font-size:20px;line-height:1.4}
+  .networkIntro{font-size:19px}
+  .startGrid strong{font-size:23px}
+  .startGrid div{padding:18px 20px}
+  .price{padding:28px}
+  .price strong{font-size:65px}
+  .offerDetails div{padding:20px}
+  .offerDetails strong{font-size:34px}
+  .contact{padding:65px 0}
+  .contact h2{font-size:43px;line-height:1;margin:15px 0 22px}
+  .contactLead{font-size:20px}
+  .contact .button{width:100%;justify-content:center}
+  .sparx{font-size:48px}
+  footer{padding:35px 0}
+}
+
+@media(max-width:380px){
+  .shell{width:calc(100% - 24px)}
+  .hero h1{font-size:39px}
+  .lead{font-size:18px}
+  .heroComposition{height:350px}
+  .heroProduct{height:315px}
+  .heroWater{width:275px}
+  .heroCoupon{width:56px}.couponThree,.couponFour{width:54px}
+  .orbitOne{width:270px;height:270px}.orbitTwo{width:190px;height:190px}
+  .sectionTitle h2,.network h2{font-size:33px}
+  .conceptVisual{height:285px}.conceptBox{height:275px}
+}

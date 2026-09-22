@@ -1,0 +1,46 @@
+/* Visual refinement layer — intentionally loaded after globals/mobile. */
+.heroProduct{animation:none!important;transform:rotate(-1.2deg)!important;filter:drop-shadow(0 34px 28px rgba(29,67,91,.24))!important}
+/* Four unique coupons only: balanced asymmetry around the product. */
+.couponOne{left:-8px!important;top:82px!important;transform:rotate(-14deg)!important;width:104px!important}
+.couponTwo{right:-8px!important;top:35px!important;transform:rotate(11deg)!important;width:100px!important}
+.couponThree{left:34px!important;bottom:34px!important;transform:rotate(9deg)!important;width:92px!important}
+.couponFour{right:10px!important;bottom:94px!important;transform:rotate(-9deg)!important;width:94px!important}
+/* The movement now comes from restrained ambient light, not the product itself. */
+.ringA{animation:haloBreath 7s ease-in-out infinite}.ringB{animation:haloBreath 7s ease-in-out 1.2s infinite}.glowOne{animation:glowBreath 8s ease-in-out infinite}
+@keyframes haloBreath{0%,100%{opacity:.55;scale:1}50%{opacity:1;scale:1.025}}
+@keyframes glowBreath{0%,100%{opacity:.7}50%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.ringA,.ringB,.glowOne{animation:none!important}}
+
+/* Richer second visual: still subordinate to the content. */
+.conceptCard{background:radial-gradient(circle at 50% 42%,#fff 0 24%,#eefaff 54%,#e4f4f9 100%)!important}
+.conceptVisual{isolation:isolate}
+.conceptGlow{position:absolute;width:300px;height:300px;border-radius:50%;left:50%;top:58px;transform:translateX(-50%);background:rgba(255,255,255,.72);border:1px solid rgba(34,169,219,.15);z-index:0}
+.conceptWater{position:absolute;width:390px;left:50%;top:55px;transform:translateX(-50%) rotate(-8deg);opacity:.26;z-index:1}
+.conceptIce{position:absolute;width:125px;left:-18px;bottom:-8px;opacity:.7;transform:rotate(16deg);z-index:2}
+.conceptBox{z-index:4}
+.conceptCoupon{z-index:6!important}
+.conceptCouponA{right:-4px!important;top:54px!important;transform:rotate(10deg)!important;width:118px!important}
+.conceptCouponB{left:-6px!important;top:35px!important;transform:rotate(-12deg)!important;width:94px!important}
+.conceptCouponC{right:10px!important;bottom:18px!important;top:auto!important;transform:rotate(-7deg)!important;width:88px!important}
+
+/* Real-world photography is used once, as editorial proof rather than another busy decoration. */
+.networkGrid{align-items:stretch!important}
+.padelMoment{margin:0;position:relative;min-height:610px;overflow:hidden;border-radius:3px;background:#dceef6;box-shadow:0 24px 55px rgba(28,56,83,.13)}
+.padelMoment:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(21,40,67,.72) 100%);pointer-events:none}
+.padelMoment img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;transition:transform .6s ease}
+.padelMoment:hover img{transform:scale(1.015)}
+.padelMoment figcaption{position:absolute;z-index:2;left:28px;right:28px;bottom:26px;color:#fff;display:flex;flex-direction:column;gap:4px}
+.padelMoment figcaption span{font-family:'Barlow Condensed';font-size:14px;font-weight:700;letter-spacing:1px;color:#7cddff}
+.padelMoment figcaption strong{font-family:'Barlow Condensed';font-size:30px;line-height:1.05}
+
+@media(max-width:900px){
+ .heroProduct{transform:translateX(50%) rotate(-1deg)!important}
+ .couponOne{left:2%!important}.couponTwo{right:2%!important}.couponThree{left:7%!important}.couponFour{right:6%!important}
+ .padelMoment{min-height:520px;margin-top:18px}
+}
+@media(max-width:560px){
+ .heroProduct{transform:translateX(50%) rotate(-1deg)!important}
+ .couponOne{left:0!important;top:52px!important;width:66px!important}.couponTwo{right:0!important;top:25px!important;width:65px!important}.couponThree{left:3%!important;bottom:31px!important;width:60px!important}.couponFour{right:2%!important;bottom:70px!important;width:60px!important}
+ .conceptGlow{width:220px;height:220px;top:42px}.conceptWater{width:280px;top:44px}.conceptIce{width:80px}.conceptCouponA{width:74px!important;right:-7px!important}.conceptCouponB{width:62px!important;left:-8px!important}.conceptCouponC{width:58px!important;right:-2px!important}
+ .padelMoment{min-height:390px;margin-top:12px}.padelMoment figcaption{left:18px;right:18px;bottom:17px}.padelMoment figcaption strong{font-size:24px}
+}

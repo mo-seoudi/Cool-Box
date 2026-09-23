@@ -33,15 +33,21 @@
 .padelMoment figcaption span{font-family:'Barlow Condensed';font-size:14px;font-weight:700;letter-spacing:1px;color:#7cddff}
 .padelMoment figcaption strong{font-family:'Barlow Condensed';font-size:30px;line-height:1.05}
 
-/* Contact details: one restrained, professional action group. */
-.contactActions{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px 12px;margin:28px auto 0;max-width:820px}
-.contactActions .button.light{margin:0!important;min-height:48px}
-.contactLink{min-height:48px;display:inline-flex;align-items:center;gap:8px;padding:11px 15px;border:1px solid rgba(255,255,255,.52);border-radius:4px;color:#fff;font-family:'Barlow Condensed';font-size:17px;font-weight:600;line-height:1;transition:background .2s ease,border-color .2s ease,transform .2s ease}
-.contactLink svg{flex:none;opacity:.95}
-.contactLink:hover{background:rgba(255,255,255,.12);border-color:#fff;transform:translateY(-1px)}
+/* Phone and email are equal contact methods; social stays a quiet secondary cue. */
+.contactActions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:28px auto 0;max-width:620px}
+.contactMethod{display:flex;align-items:center;gap:12px;min-height:66px;padding:11px 16px;border:1px solid rgba(255,255,255,.55);border-radius:5px;color:#fff;text-align:left;transition:background .2s ease,border-color .2s ease,transform .2s ease}
+.contactMethod:hover{background:rgba(255,255,255,.11);border-color:#fff;transform:translateY(-1px)}
+.contactMethod>span:last-child{display:flex;flex-direction:column;gap:3px;min-width:0}
+.contactMethod small{font-family:'Barlow Condensed';font-size:11px;font-weight:700;letter-spacing:1.15px;opacity:.78}
+.contactMethod strong{font-family:'Barlow Condensed';font-size:18px;font-weight:600;white-space:nowrap}
+.contactIcon{width:38px;height:38px;border-radius:50%;background:#fff;color:var(--blue);display:flex;align-items:center;justify-content:center;flex:none;font-family:'Barlow Condensed';font-size:12px;font-weight:700}
+.socialFollow{display:flex;justify-content:center;align-items:center;gap:9px;margin:18px auto 0;color:rgba(255,255,255,.8)}
+.socialFollow>span{font-family:'Barlow Condensed';font-size:11px;font-weight:700;letter-spacing:1.25px}
+.socialFollow a{width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:50%;color:#fff;transition:background .2s ease,transform .2s ease}
+.socialFollow a:hover{background:rgba(255,255,255,.13);transform:translateY(-1px)}
 
 /* Bottom branding: keep SPARX as a quiet endorsement, then finish with a compact Cool Box footer. */
-.sparx{margin:34px auto 0!important;line-height:1!important;display:flex;justify-content:center;align-items:center}
+.sparx{margin:28px auto 0!important;line-height:1!important;display:flex;justify-content:center;align-items:center}
 .sparx img{display:block;width:180px!important;max-width:42vw;height:auto;object-fit:contain}
 footer{padding:26px 0!important}
 footer .shell{display:flex;align-items:center;justify-content:space-between;gap:28px}
@@ -58,8 +64,7 @@ footer p{margin:0!important;text-align:right;line-height:1.5}
  .couponOne{left:0!important;top:52px!important;width:66px!important}.couponTwo{right:0!important;top:25px!important;width:65px!important}.couponThree{left:3%!important;bottom:31px!important;width:60px!important}.couponFour{right:2%!important;bottom:70px!important;width:60px!important}
  .conceptGlow{width:220px;height:220px;top:42px}.conceptWater{width:280px;top:44px}.conceptIce{width:80px}.conceptCouponA{width:74px!important;right:-7px!important}.conceptCouponB{width:62px!important;left:-8px!important}.conceptCouponC{width:58px!important;right:-2px!important}
  .padelMoment{min-height:390px;margin-top:12px}.padelMoment figcaption{left:18px;right:18px;bottom:17px}.padelMoment figcaption strong{font-size:24px}
- .contactActions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:22px;width:100%}.contactActions .button.light{grid-column:1/-1;width:100%;justify-content:center}.contactLink{justify-content:center;min-width:0;padding:10px 9px;font-size:15px}.contactLink:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
- .sparx{margin-top:28px!important}.sparx img{width:145px!important;max-width:48vw}
+ .contactActions{grid-template-columns:1fr;gap:8px;margin-top:22px;max-width:360px}.contactMethod{min-height:58px;padding:9px 13px}.contactIcon{width:34px;height:34px}.contactMethod strong{font-size:17px}.socialFollow{margin-top:14px}
+ .sparx{margin-top:24px!important}.sparx img{width:145px!important;max-width:48vw}
  footer{padding:22px 0!important}footer .shell{gap:16px}.footerLogo{width:86px!important}footer p{font-size:10px!important;max-width:190px}
 }
-@media(max-width:380px){.contactActions{grid-template-columns:1fr}.contactActions .button.light{grid-column:auto}.contactLink{font-size:15px}}

@@ -61,7 +61,7 @@ export default function ContactSection() {
         </div>
 
         <div className="sparx">
-          <img src="/images/sparx-logo.png" alt="SPARX Media Solutions" />
+          <img src={contact.sparxLogo} alt="SPARX Media Solutions" />
         </div>
       </div>
     </section>

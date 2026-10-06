@@ -1,4 +1,4 @@
-/* Preview branch responsive stylesheet. Existing production CSS is untouched. */
+/* Responsive overrides: tablet, phone, then small phone. */
 @media (max-width: 900px) {
   .nav nav, .desktopCta { display: none; }
   .menuButton { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 0; background: transparent; color: var(--navy); cursor: pointer; }

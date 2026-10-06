@@ -1,0 +1,84 @@
+/* Optional campaign gallery.
+   The section stays hidden until entries are added in content/campaigns.js. */
+
+.campaigns {
+  padding: 105px 0;
+  background: #fff;
+}
+
+.campaignGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.campaignCard {
+  overflow: hidden;
+  background: #f2f5f6;
+}
+
+.campaignCard > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.campaignCardText {
+  padding: 24px 26px 18px;
+}
+
+.campaignCardText small {
+  font-family: 'Barlow Condensed';
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.campaignCardText h3 {
+  margin: 5px 0 8px;
+  font-family: 'Barlow Condensed';
+  font-size: 30px;
+  color: var(--navy);
+}
+
+.campaignCardText p {
+  margin: 0;
+  font-family: 'Barlow Condensed';
+  font-size: 19px;
+  line-height: 1.45;
+  color: #647087;
+}
+
+.campaignThumbs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  padding: 0 4px 4px;
+}
+
+.campaignThumbs img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+@media (max-width: 700px) {
+  .campaigns {
+    padding: 62px 0;
+  }
+
+  .campaignGrid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .campaignCardText {
+    padding: 20px;
+  }
+
+  .campaignCardText h3 {
+    font-size: 26px;
+  }
+}

@@ -2,7 +2,7 @@ import { ArrowRight } from 'lucide-react'
 import { siteContent } from '../../content/site'
 
 export default function HeroSection() {
-  const { hero } = siteContent
+  const { hero, heroHighlights } = siteContent
 
   return (
     <section className="hero" id="top">
@@ -17,9 +17,9 @@ export default function HeroSection() {
             {hero.titleStart}
             <br />
             <em>
-              {hero.titleEmphasis.split(' ').slice(0, 3).join(' ')}
+              {hero.titleEmphasisLine1}
               <br />
-              {hero.titleEmphasis.split(' ').slice(3).join(' ')}
+              {hero.titleEmphasisLine2}
             </em>
           </h1>
 
@@ -40,18 +40,18 @@ export default function HeroSection() {
           <div className="heroRing ringA" />
           <div className="heroRing ringB" />
 
-          <img className="heroWater waterBack" src="/images/droplets.png" alt="" />
-          <img className="heroIce iceBack" src="/images/ice-cubes.png" alt="" />
+          <img className="heroWater waterBack" src={hero.images.droplets} alt="" />
+          <img className="heroIce iceBack" src={hero.images.ice} alt="" />
           <img
             className="heroProduct"
-            src="/images/box-bottle.png"
+            src={hero.images.product}
             alt="Cool Box with chilled water bottle"
           />
-          <img className="heroCoupon couponOne" src="/images/coupon-1.png" alt="" />
-          <img className="heroCoupon couponTwo" src="/images/coupon-2.png" alt="" />
-          <img className="heroCoupon couponThree" src="/images/coupon-3.png" alt="" />
-          <img className="heroCoupon couponFour" src="/images/coupon-4.png" alt="" />
-          <img className="heroIce iceFront" src="/images/ice-cubes.png" alt="" />
+          <img className="heroCoupon couponOne" src={hero.images.coupons[0]} alt="" />
+          <img className="heroCoupon couponTwo" src={hero.images.coupons[1]} alt="" />
+          <img className="heroCoupon couponThree" src={hero.images.coupons[2]} alt="" />
+          <img className="heroCoupon couponFour" src={hero.images.coupons[3]} alt="" />
+          <img className="heroIce iceFront" src={hero.images.ice} alt="" />
 
           <span className="bubble bubble1" />
           <span className="bubble bubble2" />
@@ -60,21 +60,13 @@ export default function HeroSection() {
       </div>
 
       <div className="shell heroValueStrip">
-        <div>
-          <span>01</span>
-          <b>HYDRATION</b>
-          <small>Essential water for active participants</small>
-        </div>
-        <div>
-          <span>02</span>
-          <b>SAVINGS</b>
-          <small>8 redeemable offers from multiple brands</small>
-        </div>
-        <div>
-          <span>03</span>
-          <b>SMART ADVERTISING</b>
-          <small>Measurable engagement and real results</small>
-        </div>
+        {heroHighlights.map((item) => (
+          <div key={item.number}>
+            <span>{item.number}</span>
+            <b>{item.title}</b>
+            <small>{item.description}</small>
+          </div>
+        ))}
       </div>
     </section>
   )

@@ -1,0 +1,76 @@
+/* Preview branch responsive stylesheet. Existing production CSS is untouched. */
+@media (max-width: 900px) {
+  .nav nav, .desktopCta { display: none; }
+  .menuButton { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 0; background: transparent; color: var(--navy); cursor: pointer; }
+  .mobileMenu { display: flex; position: absolute; top: 78px; left: 0; right: 0; z-index: 100; flex-direction: column; padding: 18px; border-top: 3px solid var(--blue); background: white; box-shadow: 0 18px 35px rgba(24,55,78,.14); }
+  .mobileMenu > a:not(.button) { padding: 14px 8px; border-bottom: 1px solid #e7ecef; font-family: 'Barlow Condensed'; font-size: 20px; font-weight: 600; }
+  .mobileMenu .button { justify-content: center; margin-top: 14px; }
+  .hero { min-height: 0; background: linear-gradient(#fff 0 47%,#edf8fb 47%); }
+  .heroGrid, .whatGrid, .offerGrid { grid-template-columns: 1fr; }
+  .heroGrid { min-height: 0; }
+  .heroText { padding-top: 35px; padding-right: 0; }
+  .hero h1 { font-size: 56px; }
+  .heroComposition { width: min(100%,560px); max-width: 560px; height: 535px; margin: 15px auto 0; }
+  .heroProduct { height: 470px; right: 50%; transform: translateX(50%) rotate(-1deg); }
+  .visualHalo, .ringA, .ringB { right: 50%; transform: translateX(50%); }
+  .waterBack { right: 50%; transform: translateX(50%) rotate(-8deg); }
+  .couponOne { left: 2%; } .couponTwo { right: 2%; } .couponThree { left: 7%; } .couponFour { right: 6%; }
+  .reasonGrid { grid-template-columns: 1fr 1fr; }
+  .flow { grid-template-columns: 1fr; }
+  .flow > i { width: 3px; height: 28px; margin: auto; }
+  .flow > i::after { display: none; }
+  .environmentGrid { grid-template-columns: 1fr 1fr; }
+  .networkGrid { grid-template-columns: 1fr; gap: 34px; }
+  .padelMoment { width: min(100%,520px); max-width: 520px; margin: 0 auto; aspect-ratio: 16/10; }
+}
+
+@media (max-width: 700px) {
+  .campaigns { padding: 62px 0; }
+  .campaignGrid { grid-template-columns: 1fr; gap: 18px; }
+}
+
+@media (max-width: 560px) {
+  .shell { width: calc(100% - 32px); }
+  .nav { height: 78px; }
+  .officialLogo { width: 108px; }
+  .mobileMenu { top: 70px; left: -1px; right: -1px; }
+  .hero { background: linear-gradient(165deg,#fff 0 46%,#edf8fb 46% 100%); }
+  .heroGrid { padding-top: 22px; }
+  .heroText { padding-top: 0; }
+  .hero h1 { font-size: 44px; }
+  .lead { font-size: 20px; }
+  .heroActions { width: 100%; flex-direction: column; align-items: stretch; gap: 18px; }
+  .heroActions .button { width: 100%; justify-content: center; }
+  .heroComposition { width: 100%; height: 390px; margin-top: 18px; }
+  .heroProduct { height: 350px; top: 7px; }
+  .waterBack { width: 310px; top: 62px; opacity: .38; }
+  .couponOne { width: 66px; left: 0; top: 52px; }
+  .couponTwo { width: 65px; right: 0; top: 25px; }
+  .couponThree { width: 60px; left: 3%; bottom: 31px; }
+  .couponFour { width: 60px; right: 2%; bottom: 70px; }
+  .heroValueStrip { grid-template-columns: 1fr; transform: none; }
+  .what, .ctaFlow, .audience, .offer, .why, .network { padding: 62px 0; }
+  .sectionTitle { gap: 12px; margin-bottom: 38px; }
+  .sectionTitle > span { width: 8px; height: 44px; }
+  .sectionTitle h2, .network h2 { font-size: 37px; }
+  .whatGrid { gap: 35px; }
+  .reasonGrid, .environmentGrid { grid-template-columns: 1fr; }
+  .networkGrid { gap: 26px; }
+  .padelMoment { width: 100%; aspect-ratio: 4/3; }
+  .price { padding: 28px; }
+  .price strong { font-size: 65px; }
+  .contact { padding: 65px 0; }
+  .contact h2 { font-size: 43px; }
+  .contactActions { grid-template-columns: 1fr; max-width: 360px; }
+  .sparx img { width: 145px; max-width: 48vw; }
+  footer .shell { gap: 16px; }
+}
+
+@media (max-width: 380px) {
+  .shell { width: calc(100% - 24px); }
+  .hero h1 { font-size: 39px; }
+  .heroComposition { height: 350px; }
+  .heroProduct { height: 315px; }
+  .sectionTitle h2, .network h2 { font-size: 33px; }
+  .offerDetails { grid-template-columns: 1fr; }
+}

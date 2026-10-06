@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+/*
+  SITE FOUNDATION
+  ----------------
+  Global variables, reset rules and shared layout elements.
+  Section-specific styling lives in sections.css.
+  Responsive overrides live in responsive.css.
+*/
+
+:root {
+  --navy: #34436d;
+  --deep: #20355f;
+  --blue: #22a9db;
+  --pale: #c8eafa;
+  --ink: #303b5f;
+  --paper: #fbfbfa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Montserrat, Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+em {
+  color: var(--blue);
+  font-style: normal;
+}
+
+.shell {
+  width: min(1180px, calc(100% - 48px));
+  margin: auto;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 20px;
+  border-radius: 4px;
+  background: var(--blue);
+  color: white;
+  font-family: 'Barlow Condensed';
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  background: #1698c7;
+}
+
+.button.light {
+  margin-top: 25px;
+  background: white;
+  color: var(--deep);
+}
+
+.kicker,
+.sectionTitle p,
+.contact > div > p:first-child {
+  color: var(--blue);
+  font-family: 'Barlow Condensed';
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 55px;
+}
+
+.sectionTitle > span {
+  width: 42px;
+  height: 55px;
+  flex: none;
+  background: var(--blue);
+}
+
+.sectionTitle p {
+  margin: 0;
+}
+
+.sectionTitle h2 {
+  margin: 6px 0 0;
+  font-family: 'Barlow Condensed';
+  font-size: 54px;
+  line-height: 0.93;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.sectionTitle.white h2,
+.sectionTitle.white p {
+  color: white;
+}

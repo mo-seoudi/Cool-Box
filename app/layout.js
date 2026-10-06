@@ -1,8 +1,6 @@
-import './globals.css'
-import './mobile.css'
-import './visual-polish.css'
-import './padel-fix.css'
-import './campaigns.css'
+import './base.css'
+import './sections.css'
+import './responsive.css'
 
 export const metadata = {
   title: 'Cool Box | Advertising people actually use',

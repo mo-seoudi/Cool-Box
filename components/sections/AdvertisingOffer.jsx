@@ -26,7 +26,7 @@ export default function AdvertisingOffer() {
 
           <div className="offerDetails">
             <div>
-              <strong>4,000</strong>
+              <strong>4,000 to 10,000</strong>
               <span>boxes distributed per campaign</span>
             </div>
             <div>

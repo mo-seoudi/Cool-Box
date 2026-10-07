@@ -3,7 +3,20 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import Logo from './Logo'
-import { siteContent } from '../content/site'
+
+/*
+  EDIT NAVIGATION HERE
+  --------------------
+  Change labels below if you want different menu wording.
+  Keep the # links unchanged unless the matching section ID also changes.
+*/
+
+const navigation = [
+  { label: 'What is Cool Box?', href: '#what' },
+  { label: 'Why Cool Box?', href: '#why' },
+  { label: 'Where It Works', href: '#environments' },
+  { label: 'Advertising Offer', href: '#offer' },
+]
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -14,16 +27,12 @@ export default function Header() {
       <Logo />
 
       <nav>
-        {siteContent.navigation.map((item) => (
-          <a key={item.href} href={item.href}>
-            {item.label}
-          </a>
+        {navigation.map((item) => (
+          <a key={item.href} href={item.href}>{item.label}</a>
         ))}
       </nav>
 
-      <a className="button desktopCta" href="#contact">
-        Advertise with us
-      </a>
+      <a className="button desktopCta" href="#contact">Advertise with us</a>
 
       <button
         className="menuButton"
@@ -36,15 +45,10 @@ export default function Header() {
 
       {menuOpen && (
         <div className="mobileMenu">
-          {siteContent.navigation.map((item) => (
-            <a key={item.href} onClick={closeMenu} href={item.href}>
-              {item.label}
-            </a>
+          {navigation.map((item) => (
+            <a key={item.href} onClick={closeMenu} href={item.href}>{item.label}</a>
           ))}
-
-          <a onClick={closeMenu} className="button" href="#contact">
-            Advertise with us
-          </a>
+          <a onClick={closeMenu} className="button" href="#contact">Advertise with us</a>
         </div>
       )}
     </header>

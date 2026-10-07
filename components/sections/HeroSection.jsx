@@ -1,9 +1,18 @@
 import { ArrowRight } from 'lucide-react'
-import { siteContent } from '../../content/site'
+
+/*
+  EDIT THIS SECTION
+  -----------------
+  All visible Hero text and image paths are kept here.
+*/
+
+const highlights = [
+  { number: '01', title: 'HYDRATION', description: 'Essential water for active participants' },
+  { number: '02', title: 'SAVINGS', description: '8 redeemable offers from multiple brands' },
+  { number: '03', title: 'SMART ADVERTISING', description: 'Measurable engagement and real results' },
+]
 
 export default function HeroSection() {
-  const { hero, heroHighlights } = siteContent
-
   return (
     <section className="hero" id="top">
       <div className="heroGlow glowOne" />
@@ -11,27 +20,23 @@ export default function HeroSection() {
 
       <div className="shell heroGrid">
         <div className="heroText">
-          <p className="kicker">{hero.kicker}</p>
-
+          <p className="kicker">AN INNOVATIVE MARKETING & ENGAGEMENT CONCEPT</p>
           <h1>
-            {hero.titleStart}
+            Smart advertising
             <br />
             <em>
-              {hero.titleEmphasisLine1}
+              that moves with
               <br />
-              {hero.titleEmphasisLine2}
+              your audience.
             </em>
           </h1>
-
-          <p className="lead">{hero.description}</p>
-
+          <p className="lead">
+            Cool Box delivers a fresh approach to connecting with consumers — combining
+            hydration, redeemable offers and smart advertising in one physical experience.
+          </p>
           <div className="heroActions">
-            <a className="button" href="#what">
-              Discover Cool Box <ArrowRight size={17} />
-            </a>
-            <a className="plain" href="#offer">
-              View advertising offer
-            </a>
+            <a className="button" href="#what">Discover Cool Box <ArrowRight size={17} /></a>
+            <a className="plain" href="#offer">View advertising offer</a>
           </div>
         </div>
 
@@ -39,20 +44,14 @@ export default function HeroSection() {
           <div className="visualHalo" />
           <div className="heroRing ringA" />
           <div className="heroRing ringB" />
-
-          <img className="heroWater waterBack" src={hero.images.droplets} alt="" />
-          <img className="heroIce iceBack" src={hero.images.ice} alt="" />
-          <img
-            className="heroProduct"
-            src={hero.images.product}
-            alt="Cool Box with chilled water bottle"
-          />
-          <img className="heroCoupon couponOne" src={hero.images.coupons[0]} alt="" />
-          <img className="heroCoupon couponTwo" src={hero.images.coupons[1]} alt="" />
-          <img className="heroCoupon couponThree" src={hero.images.coupons[2]} alt="" />
-          <img className="heroCoupon couponFour" src={hero.images.coupons[3]} alt="" />
-          <img className="heroIce iceFront" src={hero.images.ice} alt="" />
-
+          <img className="heroWater waterBack" src="/images/droplets.png" alt="" />
+          <img className="heroIce iceBack" src="/images/ice-cubes.png" alt="" />
+          <img className="heroProduct" src="/images/box-bottle.png" alt="Cool Box with chilled water bottle" />
+          <img className="heroCoupon couponOne" src="/images/coupon-1.png" alt="" />
+          <img className="heroCoupon couponTwo" src="/images/coupon-2.png" alt="" />
+          <img className="heroCoupon couponThree" src="/images/coupon-3.png" alt="" />
+          <img className="heroCoupon couponFour" src="/images/coupon-4.png" alt="" />
+          <img className="heroIce iceFront" src="/images/ice-cubes.png" alt="" />
           <span className="bubble bubble1" />
           <span className="bubble bubble2" />
           <span className="bubble bubble3" />
@@ -60,7 +59,7 @@ export default function HeroSection() {
       </div>
 
       <div className="shell heroValueStrip">
-        {heroHighlights.map((item) => (
+        {highlights.map((item) => (
           <div key={item.number}>
             <span>{item.number}</span>
             <b>{item.title}</b>

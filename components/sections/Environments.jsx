@@ -1,5 +1,18 @@
 import SectionTitle from '../ui/SectionTitle'
-import { siteContent } from '../../content/site'
+
+/*
+  EDIT THIS SECTION
+  -----------------
+  All visible environment names and descriptions are below.
+*/
+
+const environments = [
+  { title: 'Corporate Events', description: 'Conferences and business gatherings.' },
+  { title: 'Universities', description: 'Campus events and student activities.' },
+  { title: 'Festivals', description: 'Cultural and music celebrations.' },
+  { title: 'Tournaments', description: 'Sports competitions and championships.' },
+  { title: 'Exhibitions', description: 'Trade shows and industry events.' },
+]
 
 export default function Environments() {
   return (
@@ -12,12 +25,11 @@ export default function Environments() {
         </SectionTitle>
 
         <p className="sectionIntro">
-          A branded hydration box designed for real engagement — from sports
-          courts to large-scale events.
+          A branded hydration box designed for real engagement — from sports courts to large-scale events.
         </p>
 
         <div className="environmentGrid">
-          {siteContent.environments.map((item, index) => (
+          {environments.map((item, index) => (
             <article key={item.title}>
               <span>0{index + 1}</span>
               <h3>{item.title}</h3>
@@ -26,9 +38,7 @@ export default function Environments() {
           ))}
         </div>
 
-        <p className="anywhere">
-          Anywhere People Gather. Anywhere Brands Want Presence.
-        </p>
+        <p className="anywhere">Anywhere People Gather. Anywhere Brands Want Presence.</p>
       </div>
     </section>
   )
